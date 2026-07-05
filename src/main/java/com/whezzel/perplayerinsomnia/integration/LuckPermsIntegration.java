@@ -33,9 +33,9 @@ public final class LuckPermsIntegration {
 				offer.invoke(registry, permission);
 			}
 
-			PerPlayerInsomnia.LOGGER.info("Registered {} permission node(s) with LuckPerms", PermissionNodes.all().size());
+			PerPlayerInsomnia.info("Registered {} permission node(s) with LuckPerms", PermissionNodes.all().size());
 		} catch (Exception exception) {
-			PerPlayerInsomnia.LOGGER.warn("Failed to register permission nodes with LuckPerms", exception);
+			PerPlayerInsomnia.warn("Failed to register permission nodes with LuckPerms", exception);
 		}
 	}
 }

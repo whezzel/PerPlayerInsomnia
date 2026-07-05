@@ -17,9 +17,9 @@ public final class PhantomPermissions {
 	public static void detectPermissionsBackend() {
 		permissionsBackendAvailable = FabricLoader.getInstance().isModLoaded("luckperms");
 		if (permissionsBackendAvailable) {
-			PerPlayerInsomnia.LOGGER.info("Permissions backend detected; command access will use permission nodes");
+			PerPlayerInsomnia.info("Permissions backend detected; command access will use permission nodes");
 		} else {
-			PerPlayerInsomnia.LOGGER.info("No permissions backend detected; using vanilla command access fallbacks");
+			PerPlayerInsomnia.info("No permissions backend detected; using vanilla command access fallbacks");
 		}
 	}
 

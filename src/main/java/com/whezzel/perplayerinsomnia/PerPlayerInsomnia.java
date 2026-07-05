@@ -12,7 +12,30 @@ import org.slf4j.LoggerFactory;
 
 public class PerPlayerInsomnia implements ModInitializer {
 	public static final String MOD_ID = "perplayerinsomnia";
+	public static final String LOG_PREFIX = "[PerPlayerInsomnia] ";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+	public static void info(String message, Object... args) {
+		LOGGER.info(LOG_PREFIX + message, args);
+	}
+
+	public static void warn(String message, Object... args) {
+		if (args.length > 0 && args[args.length - 1] instanceof Throwable throwable) {
+			LOGGER.warn(LOG_PREFIX + message, throwable);
+			return;
+		}
+
+		LOGGER.warn(LOG_PREFIX + message, args);
+	}
+
+	public static void error(String message, Object... args) {
+		if (args.length > 0 && args[args.length - 1] instanceof Throwable throwable) {
+			LOGGER.error(LOG_PREFIX + message, throwable);
+			return;
+		}
+
+		LOGGER.error(LOG_PREFIX + message, args);
+	}
 
 	@Override
 	public void onInitialize() {
@@ -35,6 +58,6 @@ public class PerPlayerInsomnia implements ModInitializer {
 
 		ServerPlayerEvents.JOIN.register(PhantomSettingsManager::applyStoredState);
 
-		LOGGER.info("Per Player Insomnia initialized");
+		info("Initialized");
 	}
 }

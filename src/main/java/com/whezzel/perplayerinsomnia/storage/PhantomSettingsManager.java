@@ -53,7 +53,7 @@ public final class PhantomSettingsManager {
 				config = loaded;
 			}
 		} catch (IOException exception) {
-			PerPlayerInsomnia.LOGGER.error("Failed to load phantom settings config", exception);
+			PerPlayerInsomnia.error("Failed to load phantom settings config", exception);
 		}
 	}
 
@@ -64,7 +64,7 @@ public final class PhantomSettingsManager {
 				GSON.toJson(config, writer);
 			}
 		} catch (IOException exception) {
-			PerPlayerInsomnia.LOGGER.error("Failed to save phantom settings config", exception);
+			PerPlayerInsomnia.error("Failed to save phantom settings config", exception);
 		}
 	}
 
