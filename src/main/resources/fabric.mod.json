@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "perplayerinsomnia",
+	"version": "${version}",
+	"name": "Per Player Insomnia",
+	"description": "Server-side per-player phantom spawning control with LuckPerms permission support.",
+	"authors": [
+		"Whezzel"
+	],
+	"license": "MIT",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"com.whezzel.perplayerinsomnia.PerPlayerInsomnia"
+		]
+	},
+	"mixins": [
+		"perplayerinsomnia.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*",
+		"fabric-permissions-api-v0": "*"
+	}
+}

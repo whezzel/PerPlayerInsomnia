@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "com.whezzel.perplayerinsomnia.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"PhantomSpawnerMixin",
+		"ServerPlayerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
